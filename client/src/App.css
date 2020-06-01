@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.prod-img {
+  max-width: 60%;
+}
+.review-img {
+  max-width: 40%;
+}
+.height-100 {
+  height: 100%;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+.nav-item .nav-link:hover {
+  color: #ffc107 !important;
+}
+.nav-link-active {
+  color: #ffc107 !important;
+}
+.nav-icon {
+  position: relative;
+  top: 8px;
+}
+.nav-vert-divider {
+  width: 2px;
+  height: 40px;
+  border: 1px solid #585858;
+  margin-top: 2px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
