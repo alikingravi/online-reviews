@@ -5,10 +5,6 @@ import { getProducts } from "../../actions/product-actions";
 import { MdDashboard } from "react-icons/md";
 
 class Dashboard extends Component {
-  // state = {
-  //   products: [],
-  // };
-
   componentDidMount() {
     if (!this.props.isAuthenticated) {
       this.props.history.push("");

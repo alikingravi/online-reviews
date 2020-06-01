@@ -3,7 +3,7 @@ const User = require("../models/User");
 const Review = require("../models/Review");
 const verify = require("./verify-token");
 
-// Get all users
+// Get all users.
 router.get("/list", verify, async (req, res) => {
   const user = await User.findOne({
     where: { id: req.user._id },
