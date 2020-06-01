@@ -62,6 +62,10 @@
   margin-top: 2px;
 }
 
+.table.products-table {
+  table-layout: fixed;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

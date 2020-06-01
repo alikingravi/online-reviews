@@ -35,7 +35,7 @@ export default function (state = initialState, action) {
     case GET_PRODUCT:
       return {
         ...state,
-        product: state.products.find((prod) => prod.id === action.payload),
+        product: state.products.find((prod) => prod.id == action.payload),
       };
     case GET_AVG_PROD_RATINGS:
       return {

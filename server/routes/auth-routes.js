@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
   if (!user) res.sendStatus(404);
 
   // jwt token
-  const token = jwt.sign({ _id: user.id }, process.env.JWT_SECRET);
+  const token = jwt.sign({ _id: user.id }, "secret" || process.env.JWT_SECRET);
 
   const userJson = user.toJSON();
   res.status(200).send({ user: userJson, token });
@@ -53,8 +53,7 @@ router.post("/login", async (req, res) => {
     return res.status(400).send("Username or password is invalid");
 
   // jwt token
-  const token = jwt.sign({ _id: user.id }, process.env.JWT_SECRET);
-  // res.header('auth-token', token).send(token);
+  const token = jwt.sign({ _id: user.id }, "secret" || process.env.JWT_SECRET);
 
   const userJson = {
     id: user.id,

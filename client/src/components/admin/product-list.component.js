@@ -35,8 +35,8 @@ class ProductList extends Component {
             <th scope="row">{prod.id}</th>
             <td>{prod.name}</td>
             <td>{prod.price}</td>
-            <td>{prod.description}</td>
-            <td>{prod.imageUrl}</td>
+            <td className="text-truncate">{prod.description}</td>
+            <td className="text-truncate">{prod.imageUrl}</td>
             <td>{prod.youtubeId}</td>
             <td>{new Date(prod.createdAt).toLocaleString()}</td>
             <td>{new Date(prod.updatedAt).toLocaleString()}</td>
@@ -66,7 +66,7 @@ class ProductList extends Component {
         <div className="row mt-4">
           <div className="col-sm-12 col-md-12">
             <div className="table-responsive">
-              <table className="table table-hover table-striped">
+              <table className="table table-hover table-striped products-table">
                 <thead>
                   <tr>
                     <th scope="col">Product Id</th>
