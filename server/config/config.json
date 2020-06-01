@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "onlinereviews",
+    "password": "onlinereviews",
+    "database": "onlinereviews",
+    "host": "127.0.0.1",
+    "dialect": "sqlite",
+    "storage": "./onlinereviews.sqlite"
+  }
+}
