@@ -36,18 +36,20 @@ npm -v: 6.4.1
 From the root directory navigate to the server folder, `cd server/`, and run the command:  
 `npm install`.
 
-Once all the dependencies have installed you can launch the back end server by running:  
+Once all the dependencies have been installed you can launch the back end server by running:  
 `npm run dev`.
+
+If you see `listening on port 5000` that means the back end server has started successfully.
 
 ### Front End Setup
 Open a new terminal window. From root directory navigate to the client folder, `cd client/`, and run the command:  
 `npm install`.
 
-Once all the dependencies have installed you can launch the front end server by running:  
+Once all the dependencies been have installed you can launch the front end server by running:  
 `npm run start`.
 
 ## Launch The App
-Open a new browser window (Google Chrome or Firefox) and put the following URL in the address bar:  
+A new browser window should open automatically once the front end server has launched successfully. If not then open a new browser window (Google Chrome or Firefox) and put the following URL in the address bar:  
 [http://localhost:3000](`http://localhost:3000`)
 
 ## Demo Users
@@ -75,7 +77,7 @@ Open a new terminal window. From the root of the project, navigate to the client
 
 > Ensure the front end server on `port 3000` is not running but the back end server on `port 5000` is running.
 
-In order to run e2e test use the command:  
+In order to run e2e tests use the command:  
 `npm run test:cypress`
 
 You may have to install additional dependencies to run cypress if you are on a windows machine.
