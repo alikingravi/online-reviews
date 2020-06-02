@@ -22,25 +22,29 @@ Online reviews is a demo app which allows users to register, login and start rev
 
 ## Installation
 
+Clone this repo into your local machine:
+```
+git clone https://github.com/alikingravi/online-reviews.git
+```
+
 ### Node and NPM versions used
 ```
 nvm current: v8.12.0
 npm -v: 6.4.1
 ```
-
-### Front End Setup
-From root directory navigate to the client folder, `cd client/`, and run the command:  
-`npm install`.
-
-Once all the dependencies have installed you can launch the front end server by running:  
-`npm run start`.
-
 ### Back End Setup
-Open a new terminal window. From the root directory navigate to the server folder, `cd server/`, and run the command:  
+From the root directory navigate to the server folder, `cd server/`, and run the command:  
 `npm install`.
 
 Once all the dependencies have installed you can launch the back end server by running:  
 `npm run dev`.
+
+### Front End Setup
+Open a new terminal window. From root directory navigate to the client folder, `cd client/`, and run the command:  
+`npm install`.
+
+Once all the dependencies have installed you can launch the front end server by running:  
+`npm run start`.
 
 ## Launch The App
 Open a new browser window (Google Chrome or Firefox) and put the following URL in the address bar:  
@@ -73,3 +77,5 @@ Open a new terminal window. From the root of the project, navigate to the client
 
 In order to run e2e test use the command:  
 `npm run test:cypress`
+
+You may have to install additional dependencies to run cypress if you are on a windows machine.
