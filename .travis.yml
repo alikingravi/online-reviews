@@ -2,6 +2,11 @@ language: generic
 sudo: required
 services:
   - docker
+addons:
+  apt:
+    packages:
+      #needed by cypress for Ubuntu 16+
+      - libconf-2-4
 cache:
   directories:
     - node_modules
