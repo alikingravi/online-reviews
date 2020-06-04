@@ -1,0 +1,30 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions:": [
+    {
+      "name": "client",
+      "image": "alikingravi/online-reviews-client",
+      "hostname": "frontend",
+      "essential": false
+    },
+    {
+      "name": "server",
+      "image": "alikingravi/online-reviews-server",
+      "hostname": "backend",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "alikingravi/online-reviews-nginx",
+      "hostname": "nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "server"]
+    }
+  ]
+}
