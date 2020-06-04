@@ -1,12 +1,12 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize } = require("sequelize");
 
 module.exports = new Sequelize(
-    process.env.DB_NAME || 'onlinereviews',
-    process.env.DB_USER || 'onlinereviews',
-    process.env.DB_PASS || 'onlinereviews',
-    {
-        dialect: process.env.DIALECT || 'sqlite',
-        host: process.env.HOST || 'localhost',
-        storage: './onlinereviews.sqlite',
-    }
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {
+    dialect: process.env.DIALECT,
+    host: process.env.HOST,
+    storage: "./onlinereviews.sqlite",
+  }
 );
