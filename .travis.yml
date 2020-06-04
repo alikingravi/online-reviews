@@ -14,10 +14,10 @@ after_success:
   - docker build -t alikingravi/online-reviews-server ./server
   - docker build -t alikingravi/online-reviews-nginx ./nginx
 
-# Login to docker cli
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Login to docker cli
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-# Push images to docker hub
-- docker push alikingravi/online-reviews-client
-- docker push alikingravi/online-reviews-server
-- docker push alikingravi/online-reviews-nginx
+  # Push images to docker hub
+  - docker push alikingravi/online-reviews-client
+  - docker push alikingravi/online-reviews-server
+  - docker push alikingravi/online-reviews-nginx
