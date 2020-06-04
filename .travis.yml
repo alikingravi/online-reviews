@@ -1,5 +1,10 @@
 language: generic
 sudo: required
+notifications:
+  email:
+    on_success: never
+    if: branch = master
+    on_failure: always
 services:
   - docker
 cache:
@@ -25,3 +30,16 @@ after_success:
   - docker push alikingravi/online-reviews-client
   - docker push alikingravi/online-reviews-server
   - docker push alikingravi/online-reviews-nginx
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: online-reviews
+  env: OnlineReviews-env
+  bucket_name: elasticbeanstalk-us-east-2-470581887581
+  bucket_path: online-reviews
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
