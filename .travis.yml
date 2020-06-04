@@ -7,7 +7,7 @@ before_install:
   - docker build -t alikingravi/e2e-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true alikingravi/e2e-test npm test:cypress
+  - docker run alikingravi/e2e-test npm test:cypress -- --coverage
 
 after_success:
   - docker build -t alikingravi/online-reviews-client ./client
