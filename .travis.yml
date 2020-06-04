@@ -2,12 +2,16 @@ language: generic
 sudo: required
 services:
   - docker
+cache:
+  directories:
+    - node_modules
+    - ~/.cache
 
 before_install:
   - docker build -t alikingravi/e2e-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run alikingravi/e2e-test npm run test:cypress -- --coverage
+  - docker run alikingravi/e2e-test npm test -- --coverage
 
 after_success:
   - docker build -t alikingravi/online-reviews-client ./client
