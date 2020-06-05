@@ -5,6 +5,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile.dev
+    image: alikingravi/online-reviews-backend-dev
     expose:
       - 5000
     ports:
@@ -17,6 +18,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile.dev
+    image: alikingravi/online-reviews-frontend-dev
     ports:
       - "3000:3000"
     volumes:
@@ -27,8 +29,9 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile.dev
+    image: alikingravi/online-reviews-nginx-dev
     ports:
-      - '3050:80'
+      - "3050:80"
     depends_on:
       - frontend
       - backend
