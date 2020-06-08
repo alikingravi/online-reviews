@@ -5,7 +5,7 @@ module.exports = new Sequelize(
   process.env.DB_USER,
   process.env.DB_PASS,
   {
-    dialect: process.env.DIALECT,
+    dialect: "sqlite",
     host: process.env.HOST,
     storage: "./onlinereviews.sqlite",
   }

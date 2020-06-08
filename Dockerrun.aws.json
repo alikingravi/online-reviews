@@ -1,17 +1,19 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "containerDefinitions:": [
+  "containerDefinitions": [
     {
       "name": "client",
       "image": "alikingravi/online-reviews-client",
       "hostname": "frontend",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "server",
       "image": "alikingravi/online-reviews-server",
       "hostname": "backend",
-      "essential": false
+      "essential": false,
+      "memory": 126
     },
     {
       "name": "nginx",
@@ -24,7 +26,8 @@
           "containerPort": 80
         }
       ],
-      "links": ["client", "server"]
+      "links": ["client", "server"],
+      "memory": 128
     }
   ]
 }
