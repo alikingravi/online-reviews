@@ -32,6 +32,15 @@ git clone https://github.com/alikingravi/online-reviews.git
 nvm current: v8.12.0
 npm -v: 6.4.1
 ```
+### Docker Installation
+From the root directory run the following command:
+`docker-compose up --build` or `docker-compose up -d --build` if you want docker to run in the background.
+
+Once all containers have been strarted, launch the app in the browser using the url:
+[http://localhost:3050](`http://localhost:3050`)
+
+### Local Installation
+
 ### Back End Setup
 From the root directory navigate to the server folder, `cd server/`, and run the command:  
 `npm install`.
@@ -40,6 +49,15 @@ Once all the dependencies have been installed you can launch the back end server
 `npm run dev`.
 
 If you see `listening on port 5000` that means the back end server has started successfully.
+
+Create a new file called `.env` in the root of the `/server` folder and add the following fields:
+- BACKEND_PORT=5000
+- FRONTEND_PORT=3000
+- DB_NAME=onlinereviews
+- DB_USER=onlinereviews
+- DB_PASS=onlinereviews
+- HOST=localhost
+- JWT_SECRET=ANY_STRING
 
 ### Front End Setup
 Open a new terminal window. From root directory navigate to the client folder, `cd client/`, and run the command:  
