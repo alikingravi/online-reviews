@@ -19,6 +19,9 @@ Online reviews is a demo app which allows users to register, login and start rev
 - Testing
   - Cypress (e2e testing)
   - Jest (Unit/Functional testing)
+- CI/CD
+  - Travis CI
+  - AWS Elastic Beanstalk
 
 ## Installation
 
@@ -65,6 +68,9 @@ Open a new terminal window. From root directory navigate to the client folder, `
 
 Once all the dependencies been have installed you can launch the front end server by running:  
 `npm run start`.
+
+If you get an `Invalid host` error, add the following line in `./client/package.json` after the `scripts` section:  
+`"proxy": "http://localhost:5000"`
 
 ## Launch The App
 A new browser window should open automatically once the front end server has launched successfully. If not then open a new browser window (Google Chrome or Firefox) and put the following URL in the address bar:  
